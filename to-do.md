@@ -4,7 +4,7 @@ Set-Up
 [x] - install redux react-redux
 [x] - install redux-logger
 [x] - install react-router-dom
-[ ] - set-up router.js
+[x] - set-up router.js
 [ ] - create components
     [ ] - starting page
     [ ] - feeling, page 1
