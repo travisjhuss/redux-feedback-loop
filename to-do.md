@@ -15,16 +15,18 @@ Set-Up
 
 
 index.js
-[ ] - import store and reducer stuff 
+[x] - import store and reducer stuff 
 [ ] - reducer for get from db
 [ ] - reducer for holding form data
 [ ] - create store
 [ ] - provider tags
 
 App.jsx
-[ ] - import router stuff
+[x] - import router stuff
 [x] - import all the components
 [ ] - header
+
+Start Page
 [ ] - start button
 
 Page1
