@@ -16,7 +16,7 @@ Set-Up
 
 index.js
 [x] - import store and reducer stuff 
-[ ] - reducer for get from db
+[x] - reducer for get from db
 [x] - reducer for holding form data
 [x] - create store
 [x] - provider tags
@@ -24,7 +24,7 @@ index.js
 App.jsx
 [x] - import router stuff
 [x] - import all the components
-[ ] - header
+[x] - header
 
 Start Page
 [x] - start button
@@ -55,7 +55,7 @@ Finish page
 ## STRETCH GOALS ##
 
 [x] - allow user to go back and change score with back button
-[ ] - material ui
+[x] - material ui
 [x] - admin section
     [x] - delete button
     [x] - flag button
