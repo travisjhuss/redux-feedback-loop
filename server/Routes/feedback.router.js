@@ -4,7 +4,17 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 // GET - get feedback forms from DB
-
+router.get('/', (req, res) => {
+    let queryText = `SELECT * FROM "feedback" ORDER BY "date" ASC;`;
+    pool.query(queryText).then(result => {
+        // Sends back the results in an object
+        res.send(result.rows);
+    })
+        .catch(error => {
+            console.log('error getting feedback table', error);
+            res.sendStatus(500);
+        });
+});
 
 // POST - add completed feedback to DB
 router.post('/', (req, res) => {

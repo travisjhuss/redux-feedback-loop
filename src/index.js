@@ -36,12 +36,18 @@ const currentFeedback = (state = {
 }
 
 const feedbackList = (state = [], action) => {
-    return state;
+    switch (action.type) {
+        case 'SET_FEEDBACK_LIST':
+            return action.payload;
+        default:
+            return state;
+    }
 }
 
 const reduxStore = createStore(
     combineReducers({
-        currentFeedback
+        currentFeedback,
+        feedbackList
     }),
     applyMiddleware(logger)
 );

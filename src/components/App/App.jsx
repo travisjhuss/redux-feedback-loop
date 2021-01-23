@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 //import components
 import StartingPage from '../StartingPage/StartingPage';
@@ -8,27 +8,51 @@ import ThreeSupport from '../ThreeSupport/ThreeSupport';
 import FourComments from '../FourComments/FourComments';
 import FiveReview from '../FiveReview/FiveReview';
 import Finish from '../Finish/Finish';
+import Admin from '../Admin/Admin';
 
-import {HashRouter as Router, Route, Link} from 'react-router-dom';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import './App.css';
 
 function App() {
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    fetchFeedback();
+  }, [])
+
+  const fetchFeedback = () => {
+    axios.get('/feedbackData')
+      .then((response) => {
+        const action = {
+          type: 'SET_FEEDBACK_LIST',
+          payload: response.data
+        }
+        dispatch(action);
+
+      }).catch(err => {
+        alert('error in GET feedback');
+        console.error(err)
+      })
+  }
+
   return (
     <Router>
-    <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-      </header>
-      <Route path="/" exact component={StartingPage}/>
-      <Route path="/one" component={OneFeeling}/>
-      <Route path="/two" component={TwoUnderstanding}/>
-      <Route path="/three" component={ThreeSupport}/>
-      <Route path="/four" component={FourComments}/>
-      <Route path="/review" component={FiveReview}/>
-      <Route path="/finish" component={Finish}/>
+      <div className='App'>
+        <header className='App-header'>
+          <h1 className='App-title'>Feedback!</h1>
+        </header>
+        <Route path="/" exact component={StartingPage} />
+        <Route path="/one" component={OneFeeling} />
+        <Route path="/two" component={TwoUnderstanding} />
+        <Route path="/three" component={ThreeSupport} />
+        <Route path="/four" component={FourComments} />
+        <Route path="/review" component={FiveReview} />
+        <Route path="/finish" component={Finish} />
+        <Route path="/admin" component={Admin} />
 
-    </div>
+      </div>
     </Router>
   );
 }
