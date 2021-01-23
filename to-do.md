@@ -57,5 +57,5 @@ Finish page
 [x] - allow user to go back and change score with back button
 [ ] - material ui
 [x] - admin section
-    [ ] - delete button
+    [x] - delete button
     [ ] - flag button
