@@ -15,7 +15,7 @@ function StartingPage() {
 
     return (
         <>
-        <img src="/images/goat_small.jpg"/>
+        <img id="goat" src="/images/goat_small.jpg"/>
         <br/>
         <Button 
             id="start-button"
