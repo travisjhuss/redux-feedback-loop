@@ -1,10 +1,33 @@
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import AdminItems from '../AdminItems/AdminItems';
 import axios from 'axios';
-import moment from 'moment';
 
 function Admin() {
 
     const feedbackList = useSelector(store => store.feedbackList);
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      fetchFeedback();
+    }, [])
+  
+    const fetchFeedback = () => {
+      axios.get('/feedbackData')
+        .then((response) => {
+          const action = {
+            type: 'SET_FEEDBACK_LIST',
+            payload: response.data
+          }
+          dispatch(action);
+  
+        }).catch(err => {
+          alert('error in GET feedback');
+          console.error(err)
+        })
+    }
+ 
 
     console.log('feedbackList:', feedbackList);
     return (
@@ -25,13 +48,7 @@ function Admin() {
                 <tbody>
                     {feedbackList.map((item, i) =>
                         <tr key={i}>
-                            <td>{moment(item.date).format('MMMM Do YYYY')}</td>
-                            <td>{item.feeling}</td>
-                            <td>{item.understanding}</td>
-                            <td>{item.support}</td>
-                            <td>{item.comments}</td>
-                            <td>{item.flagged}</td>
-                            <td><button>DELETE</button></td>
+                            <AdminItems item={item} fetchFeedback={fetchFeedback}/>
                         </tr>
                     )}
                 </tbody>

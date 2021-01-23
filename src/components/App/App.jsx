@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import axios from 'axios';
 //import components
 import StartingPage from '../StartingPage/StartingPage';
 import OneFeeling from '../OneFeeling/OneFeeling';
@@ -11,31 +10,9 @@ import Finish from '../Finish/Finish';
 import Admin from '../Admin/Admin';
 
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import './App.css';
 
 function App() {
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    fetchFeedback();
-  }, [])
-
-  const fetchFeedback = () => {
-    axios.get('/feedbackData')
-      .then((response) => {
-        const action = {
-          type: 'SET_FEEDBACK_LIST',
-          payload: response.data
-        }
-        dispatch(action);
-
-      }).catch(err => {
-        alert('error in GET feedback');
-        console.error(err)
-      })
-  }
 
   return (
     <Router>
@@ -50,7 +27,10 @@ function App() {
         <Route path="/four" component={FourComments} />
         <Route path="/review" component={FiveReview} />
         <Route path="/finish" component={Finish} />
-        <Route path="/admin" component={Admin} />
+        <Route path="/admin">
+          <Admin/>
+        </Route>
+      
 
       </div>
     </Router>

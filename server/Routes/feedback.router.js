@@ -35,4 +35,19 @@ router.post('/', (req, res) => {
         });
 });
 
+// DELETE - remove from database
+router.delete('/:id', (req, res) => {
+    let id = req.params.id;
+    console.log('deleteing id:', id);
+    
+    let queryText = `DELETE FROM "feedback" WHERE id=$1;`;
+    pool.query(queryText, [id])
+        .then((result) => {
+            res.sendStatus(200);
+        }).catch((error) => {
+            console.log('Error in DELETE:', error);
+            res.sendStatus(500);
+        })
+});
+
 module.exports = router;
