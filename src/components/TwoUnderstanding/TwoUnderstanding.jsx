@@ -23,7 +23,7 @@ function TwoUnderstanding() {
     }
 
     return (
-        <div className="feeling-form">
+        <div className="form">
             <h3 className="page-count">2 of 4 pages</h3>
             <h2>How well are you understanding the content?</h2>
             <FormControl component="fieldset" >

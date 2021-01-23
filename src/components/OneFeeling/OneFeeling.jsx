@@ -18,7 +18,7 @@ function OneFeeling() {
     }
 
     return (
-        <div className="feeling-form">
+        <div className="form">
             <h3 className="page-count">1 of 4 pages</h3>
             <h2>How are you feeling today?</h2>
             <FormControl component="fieldset" >
