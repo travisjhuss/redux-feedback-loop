@@ -14,11 +14,16 @@ function StartingPage() {
     } // end onStart
 
     return (
+        <>
+        <img src="/images/goat_small.jpg"/>
+        <br/>
         <Button 
             id="start-button"
             variant="contained"
             size="large"
-            onClick={onStart}>START</Button>
+            onClick={onStart}
+        >START</Button>
+        </>
     )
 } 
 

@@ -1,6 +1,10 @@
 #start-button {
     background-color: #3C474B;
     color: white;
-    margin: 175px auto;
+    margin: 25px auto;
     font-family: 'Raleway', sans-serif;
+}
+
+img {
+    margin-top: 50px;
 }
