@@ -19,6 +19,11 @@ function FiveReview() {
             })
     } // end onSubmit
 
+    const onBack = (evt) => {
+        evt.preventDefault();
+        history.push('/four');
+    }
+
     console.log('current form data:', currentFeedback);
     return (
         <>
@@ -27,6 +32,7 @@ function FiveReview() {
         <p>How well are you understanding the content? {currentFeedback.understanding}</p>
         <p>How well are you being supported? {currentFeedback.support}</p>
         <p>Your comments: {currentFeedback.comments}</p>
+        <button onClick={onBack}>BACK</button>
         <button onClick={onSubmit}>SUBMIT</button>
         </>
     )

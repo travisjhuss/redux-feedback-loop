@@ -54,7 +54,7 @@ Finish page
 
 ## STRETCH GOALS ##
 
-[ ] - allow user to go back and change score with back button
+[x] - allow user to go back and change score with back button
 [ ] - material ui
 [ ] - admin section
     [ ] - delete button

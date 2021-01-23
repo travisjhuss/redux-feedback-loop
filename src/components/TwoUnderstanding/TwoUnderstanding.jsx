@@ -9,10 +9,15 @@ function TwoUnderstanding() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const onClick = (evt) => {
+    const onNext = (evt) => {
         evt.preventDefault();
         dispatch({ type: 'SET_UNDERSTANDING', payload: understanding })
         history.push('/three');
+    }
+
+    const onBack = (evt) => {
+        evt.preventDefault();
+        history.push('/one');
     }
 
     return (
@@ -27,8 +32,8 @@ function TwoUnderstanding() {
                 <option value="5">5</option>
             </select>
             <br />
-            <button onClick={onClick}>NEXT</button>
-            
+            <button onClick={onBack}>BACK</button>
+            <button onClick={onNext}>NEXT</button>
         </>
     )
 }

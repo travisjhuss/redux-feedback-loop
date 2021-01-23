@@ -15,6 +15,11 @@ function FourComments() {
         history.push('/review');
     }
 
+    const onBack = (evt) => {
+        evt.preventDefault();
+        history.push('/two');
+    }
+
     return (
         <>
             <h3>4 of 4 pages</h3>
@@ -26,6 +31,7 @@ function FourComments() {
                  onChange={(evt) => setComments(evt.target.value)}
             />
             <br />
+            <button onClick={onBack}>BACK</button>
             <button onClick={onClick}>NEXT</button>
         </>
     )

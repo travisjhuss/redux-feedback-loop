@@ -15,6 +15,11 @@ function ThreeSupport() {
         history.push('/four');
     }
 
+    const onBack = (evt) => {
+        evt.preventDefault();
+        history.push('/two');
+    }
+
     return (
         <>
             <h3>3 of 4 pages</h3>
@@ -27,6 +32,7 @@ function ThreeSupport() {
                 <option value="5">5</option>
             </select>
             <br />
+            <button onClick={onBack}>BACK</button>
             <button onClick={onClick}>NEXT</button>
         </>
     )
