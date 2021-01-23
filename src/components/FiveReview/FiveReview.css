@@ -1,0 +1,25 @@
+#submit-button {
+    background-color: #3C474B;
+    color: white;
+    margin-top: 70px;
+    margin-left: 321px;
+    padding: 10px 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.form {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.review-head {
+    margin-bottom: 95px;
+}
+
+#review-back-button {
+    background-color: #3C474B;
+    color: white;
+    margin-top: 70px;
+    padding: 10px 25px;
+    font-family: 'Raleway', sans-serif;
+}

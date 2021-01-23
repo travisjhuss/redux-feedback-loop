@@ -1,6 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { Button } from '@material-ui/core';
 import axios from 'axios';
+import './FiveReview.css';
+
 
 function FiveReview() {
 
@@ -12,7 +15,7 @@ function FiveReview() {
     const onSubmit = () => {
         axios.post('/feedbackData', currentFeedback)
             .then(response => {
-                dispatch({type: 'CLEAR'})
+                dispatch({ type: 'CLEAR' })
                 history.push('/finish');
             }).catch(err => {
                 console.error(err)
@@ -26,15 +29,15 @@ function FiveReview() {
 
     console.log('current form data:', currentFeedback);
     return (
-        <>
-        <h3>Review your feedback</h3>
-        <p>How are you feeling today? {currentFeedback.feeling}</p>
-        <p>How well are you understanding the content? {currentFeedback.understanding}</p>
-        <p>How well are you being supported? {currentFeedback.support}</p>
-        <p>Your comments: {currentFeedback.comments}</p>
-        <button onClick={onBack}>BACK</button>
-        <button onClick={onSubmit}>SUBMIT</button>
-        </>
+        <div className="form">
+            <h3 className="review-head">Review your feedback</h3>
+            <p>How are you feeling today? {currentFeedback.feeling}</p>
+            <p>How well are you understanding the content? {currentFeedback.understanding}</p>
+            <p>How well are you being supported? {currentFeedback.support}</p>
+            <p>Your comments: {currentFeedback.comments}</p>
+            <Button id="review-back-button" size="large" onClick={onBack}>BACK</Button>
+            <Button id="submit-button" size="large" onClick={onSubmit}>Submit</Button>
+        </div>
     )
 }
 
