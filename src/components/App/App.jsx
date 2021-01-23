@@ -1,16 +1,44 @@
 import React from 'react';
 import axios from 'axios';
+//import components
+import StartingPage from '../StartingPage/StartingPage';
+import OneFeeling from '../OneFeeling/OneFeeling';
+import TwoUnderstanding from '../TwoUnderstanding/TwoUnderstanding';
+import ThreeSupport from '../ThreeSupport/ThreeSupport';
+import FourComments from '../FourComments/FourComments';
+import FiveReview from '../FiveReview/FiveReview';
+import Finish from '../Finish/Finish';
+
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 
 function App() {
 
   return (
+    <Router>
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
+        {/* temp nav menu */}
+        <nav>
+        <Link to='/one'>1</Link>{''}
+        <Link to='/two'>2</Link>{''}
+        <Link to='/three'>3</Link>{''}
+        <Link to='/four'>4</Link>{''}
+        <Link to='/review'>review</Link>{''}
+        <Link to='/finish'>finish</Link>
+        </nav>
       </header>
+      <Route path="/" exact component={StartingPage}/>
+      <Route path="/one" component={OneFeeling}/>
+      <Route path="/two" component={TwoUnderstanding}/>
+      <Route path="/three" component={ThreeSupport}/>
+      <Route path="/four" component={FourComments}/>
+      <Route path="/review" component={FiveReview}/>
+      <Route path="/finish" component={Finish}/>
+
     </div>
+    </Router>
   );
 }
 

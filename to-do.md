@@ -23,7 +23,7 @@ index.js
 
 App.jsx
 [ ] - import router stuff
-[ ] - import all the components
+[x] - import all the components
 [ ] - header
 [ ] - start button
 
