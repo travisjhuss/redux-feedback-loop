@@ -28,6 +28,7 @@ function TwoUnderstanding() {
             </select>
             <br />
             <button onClick={onClick}>NEXT</button>
+            
         </>
     )
 }

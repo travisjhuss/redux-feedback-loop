@@ -17,9 +17,9 @@ Set-Up
 index.js
 [x] - import store and reducer stuff 
 [ ] - reducer for get from db
-[ ] - reducer for holding form data
-[ ] - create store
-[ ] - provider tags
+[x] - reducer for holding form data
+[x] - create store
+[x] - provider tags
 
 App.jsx
 [x] - import router stuff
@@ -27,34 +27,34 @@ App.jsx
 [ ] - header
 
 Start Page
-[ ] - start button
+[x] - start button
 
 Page1
-[ ] - feeling input. 1-5
-[ ] - next button
+[x] - feeling input. 1-5
+[x] - next button
 
 Page2
-[ ] - understanding input. 1-5
-[ ] - next button
+[x] - understanding input. 1-5
+[x] - next button
 
 Page3
-[ ] - supported input, 1-5
-[ ] - next button
+[x] - supported input, 1-5
+[x] - next button
 
 Page4
-[ ] - comment input
-[ ] - next button
+[x] - comment input
+[x] - next button
 
 Page5
-[ ] - review data
-[ ] - submit feedback button
+[x] - review data
+[x] - submit feedback button
 
 Finish page
-[ ] - leave new feedback button
+[x] - leave new feedback button
 
 ## STRETCH GOALS ##
 
-[ ] - allow user to go back and change score on review page
+[ ] - allow user to go back and change score with back button
 [ ] - material ui
 [ ] - admin section
     [ ] - delete button

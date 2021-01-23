@@ -27,6 +27,9 @@ const currentFeedback = (state = {
         case 'SET_COMMENTS':
             state.comments = action.payload;
             return state;
+        case 'CLEAR':
+            state = {};
+            return state;
         default:
             return state;
     }

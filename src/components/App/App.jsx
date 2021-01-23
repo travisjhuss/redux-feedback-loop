@@ -19,15 +19,6 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
-        {/* temp nav menu */}
-        <nav>
-        <Link to='/one'>1</Link>{''}
-        <Link to='/two'>2</Link>{''}
-        <Link to='/three'>3</Link>{''}
-        <Link to='/four'>4</Link>{''}
-        <Link to='/review'>review</Link>{''}
-        <Link to='/finish'>finish</Link>
-        </nav>
       </header>
       <Route path="/" exact component={StartingPage}/>
       <Route path="/one" component={OneFeeling}/>
