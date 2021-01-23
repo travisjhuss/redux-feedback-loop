@@ -21,6 +21,7 @@ function App() {
         <Paper elevation="6" id="header">
           <h1>Daily Feedback</h1>
         </Paper>
+        <Paper id="route-container" elevation="6">
         <Route path="/" exact component={StartingPage} />
         <Route path="/one" component={OneFeeling} />
         <Route path="/two" component={TwoUnderstanding} />
@@ -31,6 +32,7 @@ function App() {
         <Route path="/admin">
           <Admin/>
         </Route>
+        </Paper>
       
 
       </div>

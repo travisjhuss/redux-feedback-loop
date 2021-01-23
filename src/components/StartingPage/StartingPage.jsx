@@ -1,4 +1,7 @@
 import { useHistory } from "react-router-dom";
+import {Paper, Button} from '@material-ui/core';
+import './StartingPage.css';
+
 
 
 function StartingPage() {
@@ -11,7 +14,11 @@ function StartingPage() {
     } // end onStart
 
     return (
-        <button onClick={onStart}>START</button>
+        <Button 
+            id="start-button"
+            variant="contained"
+            size="large"
+            onClick={onStart}>START</Button>
     )
 } 
 

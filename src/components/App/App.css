@@ -15,12 +15,21 @@
 #header {
   background-color: #4F7CAC;
   min-height: 70px;
-  padding: 20px;
+  padding: 18px;
   color: white;
   margin: 20px auto;
   width: 75%;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
+}
+
+#route-container {
+  width: 60%;
+  margin: 10% auto;
+  height: 400px;
+  text-align: center;
+  background-color: #4F7CAC;
+  position: relative;
 }
 
 
