@@ -58,4 +58,4 @@ Finish page
 [ ] - material ui
 [x] - admin section
     [x] - delete button
-    [ ] - flag button
+    [x] - flag button

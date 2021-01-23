@@ -1,8 +1,16 @@
 .App {
   text-align: center;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('feedback-background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.App-header {
+#header {
   background-color: #a2c6ff;
   min-height: 70px;
   padding: 20px;
@@ -21,3 +29,4 @@
 h4 {
   font-style: italic;
 }
+
