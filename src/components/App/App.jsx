@@ -17,11 +17,9 @@ function App() {
 
   return (
     <Router>
-      <div 
-        className='App' 
-        >
+      <div className='App' >
         <Paper elevation="6" id="header">
-          <h1 className='App-title'>Feedback!</h1>
+          <h1>Daily Feedback</h1>
         </Paper>
         <Route path="/" exact component={StartingPage} />
         <Route path="/one" component={OneFeeling} />
