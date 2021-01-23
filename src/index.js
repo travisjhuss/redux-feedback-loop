@@ -21,6 +21,12 @@ const currentFeedback = (state = {
         case 'SET_UNDERSTANDING':
             state.understanding = action.payload;
             return state;
+        case 'SET_SUPPORT':
+            state.support = action.payload;
+            return state;
+        case 'SET_COMMENTS':
+            state.comments = action.payload;
+            return state;
         default:
             return state;
     }
@@ -32,10 +38,10 @@ const feedbackList = (state = [], action) => {
 
 const reduxStore = createStore(
     combineReducers({
-      currentFeedback
+        currentFeedback
     }),
     applyMiddleware(logger)
-  );
+);
 
 ReactDOM.render(<Provider store={reduxStore}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();

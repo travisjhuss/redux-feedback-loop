@@ -11,24 +11,24 @@ function TwoUnderstanding() {
 
     const onClick = (evt) => {
         evt.preventDefault();
-        dispatch({type: 'SET_UNDERSTANDING', payload: understanding})
+        dispatch({ type: 'SET_UNDERSTANDING', payload: understanding })
         history.push('/three');
     }
 
     return (
         <>
-        <h3>2 of 4 pages</h3>
-        <h2>How well are you understanding the content?</h2>
-        <select required onChange={(evt) => setUnderstanding(evt.target.value)}>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <br/>
-        <button onClick={onClick}>NEXT</button>
-    </>
+            <h3>2 of 4 pages</h3>
+            <h2>How well are you understanding the content?</h2>
+            <select required onChange={(evt) => setUnderstanding(evt.target.value)}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br />
+            <button onClick={onClick}>NEXT</button>
+        </>
     )
 }
 
