@@ -14,7 +14,16 @@ const currentFeedback = (state = {
     support: 0,
     comments: ''
 }, action) => {
-    return state;
+    switch (action.type) {
+        case 'SET_FEELING':
+            state.feeling = action.payload;
+            return state;
+        case 'SET_UNDERSTANDING':
+            state.understanding = action.payload;
+            return state;
+        default:
+            return state;
+    }
 }
 
 const feedbackList = (state = [], action) => {
