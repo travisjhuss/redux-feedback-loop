@@ -1,8 +1,8 @@
-#next-button {
+#us-next-button {
     background-color: #3C474B;
     color: white;
     margin-top: 125px;
-    margin-left: 430px;
+    margin-left: 339px;
     padding: 10px 25px;
     font-family: 'Raleway', sans-serif;
 }
@@ -14,4 +14,12 @@
 
 .page-count {
     margin-bottom: 65px;
+}
+
+#us-back-button {
+    background-color: #3C474B;
+    color: white;
+    margin-top: 125px;
+    padding: 10px 25px;
+    font-family: 'Raleway', sans-serif;
 }

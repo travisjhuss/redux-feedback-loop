@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { Button, Radio, FormControlLabel, RadioGroup, FormControl } from '@material-ui/core';
+import './TwoUnderstanding.css';
 
 function TwoUnderstanding() {
 
@@ -21,20 +23,47 @@ function TwoUnderstanding() {
     }
 
     return (
-        <>
-            <h3>2 of 4 pages</h3>
+        <div className="feeling-form">
+            <h3 className="page-count">2 of 4 pages</h3>
             <h2>How well are you understanding the content?</h2>
-            <select required onChange={(evt) => setUnderstanding(evt.target.value)}>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <FormControl component="fieldset" >
+                <RadioGroup row name="understanding" defaultValue="3" onChange={(evt) => setUnderstanding(evt.target.value)}>
+                    <FormControlLabel
+                        value="1"
+                        control={<Radio color="default" />}
+                        label="1"
+                        labelPlacement="top"
+                    />
+                    <FormControlLabel
+                        value="2"
+                        control={<Radio color="default" />}
+                        label="2"
+                        labelPlacement="top"
+                    />
+                    <FormControlLabel
+                        value="3"
+                        control={<Radio color="default" />}
+                        label="3"
+                        labelPlacement="top"
+                    />
+                    <FormControlLabel
+                        value="4"
+                        control={<Radio color="default" />}
+                        label="4"
+                        labelPlacement="top"
+                    />
+                    <FormControlLabel
+                        value="5"
+                        control={<Radio color="default" />}
+                        label="5"
+                        labelPlacement="top"
+                    />
+                </RadioGroup>
+            </FormControl>
             <br />
-            <button onClick={onBack}>BACK</button>
-            <button onClick={onNext}>NEXT</button>
-        </>
+            <Button id="us-back-button" size="large" onClick={onBack}>BACK</Button>
+            <Button id="us-next-button" size="large" onClick={onNext}>NEXT</Button>
+        </div>
     )
 }
 
