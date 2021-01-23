@@ -1,0 +1,12 @@
+#restart-button {
+    background-color: #3C474B;
+    color: white;
+    margin-top: 6px;
+    padding: 10px 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.finish {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}

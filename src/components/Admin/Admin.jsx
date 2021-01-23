@@ -2,6 +2,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AdminItems from '../AdminItems/AdminItems';
 import axios from 'axios';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import './Admin.css';
 
 function Admin() {
 
@@ -31,29 +38,28 @@ function Admin() {
 
     console.log('feedbackList:', feedbackList);
     return (
-        <>
+        <Paper id="admin-container" elevation="6">
             <h3>Admin Page</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Feeling</th>
-                        <th>Understanding</th>
-                        <th>Support</th>
-                        <th>Comments</th>
-                        <th>Flag</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <Table size="small" aria-label="a dense table" id="table" >
+                <TableHead>
+                    <TableRow>
+                        <TableCell style={{color: 'white'}}>Feeling</TableCell>
+                        <TableCell style={{color: 'white'}}>Understanding</TableCell>
+                        <TableCell style={{color: 'white'}}>Support</TableCell>
+                        <TableCell style={{color: 'white'}}>Comments</TableCell>
+                        <TableCell style={{color: 'white'}}>Flag</TableCell>
+                        <TableCell style={{color: 'white'}}>Delete</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody >
                     {feedbackList.map((item, i) =>
-                        <tr key={i}>
+                        <TableRow key={i}>
                             <AdminItems item={item} fetchFeedback={fetchFeedback}/>
-                        </tr>
+                        </TableRow>
                     )}
-                </tbody>
-            </table>
-        </>
+                </TableBody>
+            </Table>
+        </Paper>
     )
 }
 

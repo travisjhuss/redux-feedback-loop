@@ -1,5 +1,10 @@
-import moment from 'moment';
 import axios from 'axios';
+import TableCell from '@material-ui/core/TableCell';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import FlagOutlinedIcon from '@material-ui/icons/FlagOutlined';
+import FlagIcon from '@material-ui/icons/Flag';
+import IconButton from '@material-ui/core/IconButton';
+import './AdminItem.css';
 
 function AdminItems({ item, fetchFeedback }) {
 
@@ -32,20 +37,23 @@ function AdminItems({ item, fetchFeedback }) {
 
     return (
         <>
-            <td>{moment(item.date).format('MMMM Do YYYY')}</td>
-            <td>{item.feeling}</td>
-            <td>{item.understanding}</td>
-            <td>{item.support}</td>
-            <td>{item.comments}</td>
-            <td>
-                <button onClick={markFlagged}>
+            <TableCell style={{color: 'white'}}>{item.feeling}</TableCell>
+            <TableCell style={{color: 'white'}}>{item.understanding}</TableCell>
+            <TableCell style={{color: 'white'}}>{item.support}</TableCell>
+            <TableCell style={{color: 'white'}}>{item.comments}</TableCell>
+            <TableCell >
+                <IconButton onClick={markFlagged}>
                     {item.flagged
-                        ? <>FLAGGED</>
-                        : <>NOT FLAGGED</>
+                        ? <FlagIcon style={{color: 'white'}}/>
+                        : <FlagOutlinedIcon style={{color: 'white'}}/>
                     }
-                </button>
-            </td>
-            <td><button onClick={handleDelete}>DELETE</button></td>
+                </IconButton>
+            </TableCell>
+            <TableCell >
+                <IconButton onClick={handleDelete}>
+                    <DeleteOutlineIcon style={{color: 'white'}}/>
+                </IconButton>
+            </TableCell>
         </>
     )
 }
