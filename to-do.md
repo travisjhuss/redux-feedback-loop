@@ -5,14 +5,13 @@ Set-Up
 [x] - install redux-logger
 [x] - install react-router-dom
 [x] - set-up router.js
-[ ] - create components
-    [ ] - starting page
-    [ ] - feeling, page 1
-    [ ] - understanding, page 2
-    [ ] - support, page 3
-    [ ] - comments, page 4
-    [ ] - review page, page 5
-    [ ] - finish page, leave new feedback
+[x] - create components
+    [x] - feeling, page 1
+    [x] - understanding, page 2
+    [x] - support, page 3
+    [x] - comments, page 4
+    [x] - review page, page 5
+    [x] - finish page, leave new feedback
 
 
 index.js
