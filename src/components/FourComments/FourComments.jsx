@@ -1,6 +1,18 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { Button, TextField } from '@material-ui/core';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+import './FourComments.css';
+
+const theme = createMuiTheme({
+    palette: {
+      primary: {
+        main: '#FFFFFF'
+      }
+    },
+  });
 
 function FourComments() {
 
@@ -9,7 +21,7 @@ function FourComments() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const onClick = (evt) => {
+    const onNext = (evt) => {
         evt.preventDefault();
         dispatch({ type: 'SET_COMMENTS', payload: comments })
         history.push('/review');
@@ -17,23 +29,28 @@ function FourComments() {
 
     const onBack = (evt) => {
         evt.preventDefault();
-        history.push('/two');
+        history.push('/three');
     }
 
     return (
-        <>
-            <h3>4 of 4 pages</h3>
+        <div className="form">
+            <h3 className="page-count">4 of 4 pages</h3>
             <h2>Any comments you want to leave?</h2>
-            <input
-                 required 
-                 type="text"
-                 placeholder="Add comments here..."
-                 onChange={(evt) => setComments(evt.target.value)}
+            <ThemeProvider theme={theme}>
+            <TextField
+                id="comments"
+                multiline
+                rows={6}
+                variant="outlined"
+                label="Add here"
+                style={{width: 350}}
+                onChange={(evt) => setComments(evt.target.value)}
             />
+            </ThemeProvider>
             <br />
-            <button onClick={onBack}>BACK</button>
-            <button onClick={onClick}>NEXT</button>
-        </>
+            <Button id="co-back-button" size="large" onClick={onBack}>BACK</Button>
+            <Button id="co-next-button" size="large" onClick={onNext}>NEXT</Button>
+        </div>
     )
 }
 

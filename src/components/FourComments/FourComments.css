@@ -1,0 +1,29 @@
+#co-next-button {
+    background-color: #3C474B;
+    color: white;
+    margin-top: 40px;
+    margin-left: 339px;
+    padding: 10px 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.form {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.page-count {
+    margin-bottom: 65px;
+}
+
+#co-back-button {
+    background-color: #3C474B;
+    color: white;
+    margin-top: 40px;
+    padding: 10px 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#comments {
+    color: white;
+}
