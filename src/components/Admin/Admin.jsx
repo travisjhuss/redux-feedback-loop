@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import axios from 'axios';
+import moment from 'moment';
 
 function Admin() {
 
@@ -24,7 +25,7 @@ function Admin() {
                 <tbody>
                     {feedbackList.map((item, i) =>
                         <tr key={i}>
-                            <td>{item.date}</td>
+                            <td>{moment(item.date).format('MMMM Do YYYY')}</td>
                             <td>{item.feeling}</td>
                             <td>{item.understanding}</td>
                             <td>{item.support}</td>
