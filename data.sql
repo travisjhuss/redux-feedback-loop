@@ -13,6 +13,10 @@ CREATE TABLE "feedback" (
   "date" date not null default CURRENT_DATE
 ); 
 
--- Sample feedback item
+-- Dummy feedback items
 INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
-VALUES (4, 4, 5, 'Doing Great!');
+VALUES (4, 4, 5, 'Doing Great!'),
+VALUES (1, 1, 5, 'HAAALLLPPPP!'),
+VALUES (5, 5, 5, 'Just peachy.'),
+VALUES (3, 3, 2, 'Something ain''t clicking');
+
